@@ -169,82 +169,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building: {fileID: 3646928233470469597, guid: 80b12f7ebb3bd624ca2172759c7ae3b0, type: 3}
   waves:
-  - waveDelay: 3
+  - waveDelay: 10
     objectSpawneds:
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
       area: 0
-      delay: 0.5
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
-      delay: 1
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
-      delay: 1
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
-      delay: 0.5
-    - prefabs: {fileID: 6206938436728864512, guid: 1b2b991a3cfa75249a1b7b9a52000092, type: 3}
-      area: 0
-      delay: 5
-    - prefabs: {fileID: 2610417043428175746, guid: bf5c32cc9329b53429420b5e84752245, type: 3}
-      area: 0
-      delay: 0
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
-      delay: 3
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
-      delay: 0
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 3
-      delay: 1
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
       delay: 0
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 1
-      delay: 3
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 1
-      delay: 0
-  - waveDelay: 3
-    objectSpawneds:
+      area: 0
+      delay: 2
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
       area: 0
-      delay: 0.5
+      delay: 2
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
       area: 0
-      delay: 1
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
-      delay: 1
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
-      delay: 0.5
-    - prefabs: {fileID: 6206938436728864512, guid: 1b2b991a3cfa75249a1b7b9a52000092, type: 3}
-      area: 0
-      delay: 5
-    - prefabs: {fileID: 2610417043428175746, guid: bf5c32cc9329b53429420b5e84752245, type: 3}
-      area: 0
-      delay: 0
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
-      delay: 3
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
-      delay: 0
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 3
-      delay: 1
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
-      delay: 0
-    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 1
-      delay: 3
-    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 1
-      delay: 0
+      delay: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

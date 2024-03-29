@@ -68,17 +68,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            FireShoot(powerStep);
+            FireShoot();
         }
     }
 
-    void FireShoot (int step) 
+    void FireShoot () 
     {
         GameObject bullet = ObjectPool.SharedInstance.GetPooledObject();
         if (bullet != null)
         {
-            bullet.transform.position = transform.position + new Vector3(0, 0, 1);
-            bullet.transform.rotation = transform.rotation;
+            bullet.transform.position = gameObject.transform.position + new Vector3(0, 0, 1);
+            bullet.transform.rotation = gameObject.transform.rotation;
             bullet.SetActive(true);
         }
     }

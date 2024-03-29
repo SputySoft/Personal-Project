@@ -22,7 +22,7 @@ public class MainHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Death();
+     
     }
 
     private void OnCollisionStay(Collision collision)
@@ -30,6 +30,7 @@ public class MainHealth : MonoBehaviour
         if (DamagerList.Contains(collision.gameObject.tag))
         {
             health--;
+            Death();
         }
     }
 
@@ -43,7 +44,7 @@ public class MainHealth : MonoBehaviour
             yield return new WaitForSeconds(1f);
             currentTime--;
         }
-
+        
         yield return health=0;
 
     }
