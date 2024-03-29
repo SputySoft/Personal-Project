@@ -11,14 +11,15 @@ public class SpwnMngr : MonoBehaviour
     public GameObject building;
     public List<Wave> waves = new List<Wave>();
     public Dictionary<SpawnArea, (Vector3 position, Quaternion rotation)> spawnLocations;
-    public bool spawningBuilding;
+    public bool spawningBuilding;//not used
+                                 //yet
     
 
     void Awake()
     {
         InitializeSpawnLocations();
     }
-
+    //coordinates of the areas
     void InitializeSpawnLocations()
     {
         spawnLocations = new Dictionary<SpawnArea, (Vector3, Quaternion)>();
@@ -74,7 +75,7 @@ public class SpwnMngr : MonoBehaviour
         Instantiate(building, position, rotation);
         Debug.Log("Building Spawned");
     }
-
+    // coroutine to spawn the waves of enemies
     IEnumerator SpawnWaves()
     {
         foreach (Wave wave in waves)
@@ -96,7 +97,7 @@ public class SpwnMngr : MonoBehaviour
 
         }
     }
-
+    // give the coordinate of buildings before spawn
     (Vector3, Quaternion) BuildingPosition()
     {
         Vector3 position = Vector3.zero; 
