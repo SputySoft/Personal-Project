@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TreeEditor;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerController : MonoBehaviour
 {
     public float xRange = 23;
     public float zRange = 13;
     public float speed = 10;
-    public GameObject Projectile;
     public int powerStep = 1;
+
     
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,11 @@ public class PlayerController : MonoBehaviour
     {
 
         Controls();
-        Mouvements();
+        MouvementsLimit();
 
     }
 
-    void Mouvements ()
+    void MouvementsLimit ()
     {
        
 
@@ -73,8 +74,16 @@ public class PlayerController : MonoBehaviour
 
     void FireShoot (int step) 
     {
-        Instantiate(Projectile, transform.position + new Vector3(0, 0, 1), transform.rotation);
+        GameObject bullet = ObjectPool.SharedInstance.GetPooledObject();
+        if (bullet != null)
+        {
+            bullet.transform.position = transform.position + new Vector3(0, 0, 1);
+            bullet.transform.rotation = transform.rotation;
+            bullet.SetActive(true);
+        }
     }
+
+
 
 }
 

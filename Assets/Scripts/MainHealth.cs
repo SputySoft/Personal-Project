@@ -22,10 +22,7 @@ public class MainHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        Death();
     }
 
     private void OnCollisionStay(Collision collision)
@@ -49,6 +46,14 @@ public class MainHealth : MonoBehaviour
 
         yield return health=0;
 
+    }
+
+    protected virtual void Death()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

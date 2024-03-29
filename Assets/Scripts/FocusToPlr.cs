@@ -25,9 +25,9 @@ public class FocusToPlr : MonoBehaviour
 
             Vector3 toPlayer = playerPos.position-transform.position;
 
-            Quaternion targetRotattion = Quaternion.LookRotation(toPlayer);
+            Quaternion targetRotation = Quaternion.LookRotation(toPlayer);
 
-            transform.rotation = Quaternion.Euler(0f, targetRotattion.eulerAngles.y, 0f);
+            transform.rotation = Quaternion.Euler(0f, targetRotation.eulerAngles.y, 0f);
         }
 
     }

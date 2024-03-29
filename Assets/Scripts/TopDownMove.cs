@@ -29,7 +29,7 @@ public class TopDownMove : MonoBehaviour
 
     }
 
-    private void DestroyOutOfRange()
+    protected virtual void DestroyOutOfRange()
     {
         if (Mathf.Abs(transform.position.x) > xOutRg || Mathf.Abs(transform.position.z) > zOutRg)
         {

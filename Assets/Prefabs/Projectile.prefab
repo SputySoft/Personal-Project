@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2356400455480065346}
   - component: {fileID: 6909717007413584353}
   - component: {fileID: 8196194794855798757}
-  - component: {fileID: 7470125849909444956}
-  - component: {fileID: -4041493188600939962}
-  - component: {fileID: -7790885134803080687}
+  - component: {fileID: -8187479209160736308}
+  - component: {fileID: -5709254085189980033}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: PlrProjectile
@@ -108,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7470125849909444956
+--- !u!114 &-8187479209160736308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,14 +116,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 9164429658139978605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe990d89b393ae1469a1c250ce4b60c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 87a2a8814e05f3e4d8d118627e3660af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vSpeed: 20
+  vSpeed: 5
   hSpeed: 0
   xOutRg: 30
   zOutRg: 20
---- !u!114 &-4041493188600939962
+--- !u!114 &-5709254085189980033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,38 +132,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9164429658139978605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c67689cb13cb486459c33046ffc70f0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7aa812320eee79e46ae248149c5830b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
   damageSpeed: 0.5
-  DamagerList:
-  - Enemy
-  - Obstacle
---- !u!54 &-7790885134803080687
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9164429658139978605}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  DamagerList: []
+  temporary: 0
+  lifeTime: 20

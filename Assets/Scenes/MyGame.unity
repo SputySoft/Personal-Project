@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 1420860587}
   - component: {fileID: 1420860588}
   - component: {fileID: 1420860589}
+  - component: {fileID: 1420860590}
   m_Layer: 3
   m_Name: PLayer
   m_TagString: Player
@@ -660,7 +661,6 @@ MonoBehaviour:
   xRange: 23
   zRange: 13
   speed: 10
-  Projectile: {fileID: 9164429658139978605, guid: b0412fa3a5f16eb40a249ace1a3e3d8e, type: 3}
   powerStep: 0
 --- !u!54 &1420860588
 Rigidbody:
@@ -687,7 +687,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 36
   m_CollisionDetection: 2
 --- !u!114 &1420860589
 MonoBehaviour:
@@ -709,6 +709,21 @@ MonoBehaviour:
   - EnemyProjectile
   temporary: 0
   lifeTime: 20
+--- !u!114 &1420860590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420860582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0173cd5d34c054a9ba0ae5e3a0c3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 9164429658139978605, guid: b0412fa3a5f16eb40a249ace1a3e3d8e, type: 3}
+  amountToPool: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
