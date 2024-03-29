@@ -172,28 +172,28 @@ MonoBehaviour:
   - waveDelay: 10
     objectSpawneds:
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
+      area: 1
       delay: 0
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
+      area: 3
       delay: 2
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
+      area: 5
       delay: 2
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
-      area: 0
+      area: 7
       delay: 2
     - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
+      area: 8
       delay: 5
     - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
+      area: 9
       delay: 2
     - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
+      area: 10
       delay: 2
     - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
-      area: 2
+      area: 11
       delay: 2
 --- !u!1 &705507993
 GameObject:

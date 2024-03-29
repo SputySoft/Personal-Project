@@ -11,6 +11,8 @@ public class SpwnMngr : MonoBehaviour
     public GameObject building;
     public List<Wave> waves = new List<Wave>();
     public Dictionary<SpawnArea, (Vector3 position, Quaternion rotation)> spawnLocations;
+    public bool spawningBuilding;
+    
 
     void Awake()
     {
@@ -66,10 +68,10 @@ public class SpwnMngr : MonoBehaviour
     void spawnBuildings()//has to be move to pooling method
     {
 
+        (Vector3 position, Quaternion rotation) = BuildingPosition();
 
 
-        Vector3 position = new Vector3(Random.Range(-22f, 22f), 5f, 16.5f + Random.Range(-2.5f, 2.5f));
-        Instantiate(building, position, building.transform.rotation);
+        Instantiate(building, position, rotation);
         Debug.Log("Building Spawned");
     }
 
@@ -94,4 +96,63 @@ public class SpwnMngr : MonoBehaviour
 
         }
     }
+
+    (Vector3, Quaternion) BuildingPosition()
+    {
+        Vector3 position = Vector3.zero; 
+        Quaternion rotation = Quaternion.identity;
+        int area = Random.Range(0,8);
+        SpawnArea key;
+
+        switch (area)
+        {
+            case 0:
+                key = SpawnArea.Top1;
+                break;
+
+            case 1:
+                key = SpawnArea.Top2;
+                break;
+            case 2:
+                key = SpawnArea.Top3;
+                break;
+            case 3:
+                key = SpawnArea.Top4;
+                break;
+            case 4:
+                key = SpawnArea.Top5;
+                break;
+            case 5:
+                key = SpawnArea.Top6;
+                break;
+            case 6:
+                key = SpawnArea.Top7;
+                break;
+            case 7:
+                key = SpawnArea.Top8;
+                break;
+
+            default:
+                key = SpawnArea.Top1;
+                break;
+        }
+
+        if (spawnLocations.TryGetValue(key, out (Vector3 position, Quaternion rotation) spawnData))
+        {
+         
+            position = spawnData.position;
+            rotation = spawnData.rotation;
+         
+            Debug.Log($"Position: {position}, Rotation: {rotation}");
+
+            
+        }
+        else
+        {
+            Debug.LogError($"key {key} not found.");
+        }
+
+        return (position, rotation);
+    }
+
 }
