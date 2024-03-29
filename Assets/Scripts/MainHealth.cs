@@ -15,7 +15,7 @@ public class MainHealth : MonoBehaviour
     {
         if (temporary) 
         { 
-            StartCoroutine(Countdown());
+            StartCoroutine(DeathCountdown());
         }
     }
 
@@ -36,7 +36,7 @@ public class MainHealth : MonoBehaviour
         }
     }
 
-    IEnumerator Countdown()
+    IEnumerator DeathCountdown()
     {
         int currentTime = lifeTime;
 

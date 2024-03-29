@@ -17,12 +17,24 @@ public class TopDownMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(1*Time.deltaTime*hSpeed, 0,1*Time.deltaTime*vSpeed));
+        Move();
 
-        if(Mathf.Abs(transform.position.x) > xOutRg || Mathf.Abs(transform.position.z) > zOutRg)
+       DestroyOutOfRange();
+
+    }
+
+    private void Move()
+    {
+        transform.Translate(new Vector3(1 * Time.deltaTime * hSpeed, 0, 1 * Time.deltaTime * vSpeed));
+
+    }
+
+    private void DestroyOutOfRange()
+    {
+        if (Mathf.Abs(transform.position.x) > xOutRg || Mathf.Abs(transform.position.z) > zOutRg)
         {
             Destroy(gameObject);
         }
-
     }
 }
+
