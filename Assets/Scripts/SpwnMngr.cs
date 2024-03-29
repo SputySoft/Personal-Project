@@ -10,7 +10,46 @@ public class SpwnMngr : MonoBehaviour
 
     public GameObject building;
     public List<Wave> waves = new List<Wave>();
+    public Dictionary<SpawnArea, (Vector3 position, Quaternion rotation)> spawnLocations;
 
+    void Awake()
+    {
+        InitializeSpawnLocations();
+    }
+
+    void InitializeSpawnLocations()
+    {
+        spawnLocations = new Dictionary<SpawnArea, (Vector3, Quaternion)>();
+
+        
+        spawnLocations[SpawnArea.Top1] = (new Vector3(-20.125f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top2] = (new Vector3(-14.375f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top3] = (new Vector3(-8.625f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top4] = (new Vector3(-2.875f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top5] = (new Vector3(2.875f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top6] = (new Vector3(8.625f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top7] = (new Vector3(14.375f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Top8] = (new Vector3(20.125f, 1f, 16.5f), Quaternion.Euler(0, 180, 0));
+
+        spawnLocations[SpawnArea.Down1] = (new Vector3(-20.125f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down2] = (new Vector3(-14.375f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down3] = (new Vector3(-8.625f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down4] = (new Vector3(-2.875f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down5] = (new Vector3(2.875f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down6] = (new Vector3(8.625f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down7] = (new Vector3(14.375f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Down8] = (new Vector3(20.125f, 1f, -16.5f), Quaternion.Euler(0, 0, 0));
+
+        spawnLocations[SpawnArea.Right1] = (new Vector3(26.5f, 1f, 9.75f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Right2] = (new Vector3(26.5f, 1f, 3.25f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Right3] = (new Vector3(26.5f, 1f, -3.25f), Quaternion.Euler(0, 180, 0));
+        spawnLocations[SpawnArea.Right4] = (new Vector3(26.5f, 1f, -9.75f), Quaternion.Euler(0, 180, 0));
+
+        spawnLocations[SpawnArea.Right1] = (new Vector3(-26.5f, 1f, 9.75f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Right2] = (new Vector3(-26.5f, 1f, 3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Right3] = (new Vector3(-26.5f, 1f, -3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Right4] = (new Vector3(-26.5f, 1f, -9.75f), Quaternion.Euler(0, 0, 0));
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +63,11 @@ public class SpwnMngr : MonoBehaviour
 
     }
 
-    void spawnBuildings()
+    void spawnBuildings()//has to be move to pooling method
     {
+
+
+
         Vector3 position = new Vector3(Random.Range(-22f, 22f), 5f, 16.5f + Random.Range(-2.5f, 2.5f));
         Instantiate(building, position, building.transform.rotation);
         Debug.Log("Building Spawned");
@@ -41,9 +83,9 @@ public class SpwnMngr : MonoBehaviour
             {
                 yield return new WaitForSeconds(objToSpawn.delay);
 
-                (Vector3 position, Quaternion rotation) = SpwnPosition(objToSpawn.area);
+                var spawnData = spawnLocations[objToSpawn.area];
 
-                Instantiate(objToSpawn.prefabs, position, rotation);
+                Instantiate(objToSpawn.prefabs, spawnData.position, spawnData.rotation);
 
                 Debug.Log("Spawned Something from wave" + wave);
 
@@ -52,42 +94,4 @@ public class SpwnMngr : MonoBehaviour
 
         }
     }
-
-    (Vector3, Quaternion) SpwnPosition(int area)
-    {
-        Vector3 position;
-        Quaternion rotation;
-
-        switch (area)
-        {
-            case 0:
-                
-                position = new Vector3(Random.Range(-22f, 22f), 1f, 16.5f + Random.Range(-2.5f, 2.5f));
-                rotation = Quaternion.Euler(0, 180, 0);
-                break;
-            case 1:
-                
-                position = new Vector3(Random.Range(-22f, 22f), 1f, -16.5f + Random.Range(-2.5f, 2.5f));
-                rotation = Quaternion.Euler(0, 0, 0);
-                break;
-            case 2:
-                
-                position = new Vector3(26.5f + Random.Range(-2.5f, 2.5f), 1f, Random.Range(-12f, 12f));
-                rotation = Quaternion.Euler(0, 180, 0);
-                break;
-            case 3:
-                
-                position = new Vector3(-26.5f + Random.Range(-2.5f, 2.5f), 1f, Random.Range(-12f, 12f));
-                rotation = Quaternion.Euler(0, 0, 0);
-                break;
-            default:
-                
-                position = new Vector3(0, 1f, 0);
-                rotation = Quaternion.identity; 
-                break;
-        }
-
-        return (position, rotation);
-    }
-
 }

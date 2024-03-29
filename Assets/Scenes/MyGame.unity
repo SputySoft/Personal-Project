@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 370680788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0028076023, y: 10, z: 0.86275196}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,6 +182,18 @@ MonoBehaviour:
       delay: 2
     - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
       area: 0
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 2
+      delay: 5
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 2
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 2
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 2
       delay: 2
 --- !u!1 &705507993
 GameObject:
