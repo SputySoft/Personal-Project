@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3000769686522285957}
   - component: {fileID: 433008633224544268}
   - component: {fileID: 5056861532742610018}
-  - component: {fileID: 2142319694521284978}
   - component: {fileID: 5783639806978500852}
   - component: {fileID: 7713570200939544321}
+  - component: {fileID: -6253289598149773680}
   m_Layer: 0
   m_Name: Buildings
   m_TagString: Obstacle
@@ -30,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3646928233470469597}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 5}
   m_LocalScale: {x: 2, y: 10, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3000769686522285957
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108,22 +108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2142319694521284978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3646928233470469597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe990d89b393ae1469a1c250ce4b60c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vSpeed: 5
-  hSpeed: 0
-  xOutRg: 30
-  zOutRg: 20
 --- !u!114 &5783639806978500852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +155,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-6253289598149773680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646928233470469597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acc4c9cb512e2342b1e3337a5b61daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vSpeed: 5
+  zOutRg: -30

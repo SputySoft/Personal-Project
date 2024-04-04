@@ -12,7 +12,7 @@ public class SpwnMngr : MonoBehaviour
     public List<Wave> waves = new List<Wave>();
     public Dictionary<SpawnArea, (Vector3 position, Quaternion rotation)> spawnLocations;
     public bool spawningBuilding;//not used
-                                 //yet
+    [SerializeField] private float yPosition=10.0f;
     
 
     void Awake()
@@ -88,7 +88,7 @@ public class SpwnMngr : MonoBehaviour
 
                 var spawnData = spawnLocations[objToSpawn.area];
 
-                Instantiate(objToSpawn.prefabs, spawnData.position, spawnData.rotation);
+                Instantiate(objToSpawn.prefabs, spawnData.position + new Vector3 (0.0f, yPosition, 0.0f) , spawnData.rotation);
 
                 Debug.Log("Spawned Something from wave" + wave);
 

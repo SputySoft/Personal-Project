@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownMove : MonoBehaviour
+public class Movement : MonoBehaviour
 {
-    public float vSpeed = -5;
-    public float hSpeed = 0;
-    public float xOutRg = 30;
-    public float zOutRg = 20;
+    public int vSpeed = -5;
+    public int hSpeed = 0;
+    public int xOutRg = 30;
+    public int zOutRg = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class TopDownMove : MonoBehaviour
     {
         Move();
 
-       DestroyOutOfRange();
+       OutOfRange();
 
     }
 
@@ -29,7 +29,7 @@ public class TopDownMove : MonoBehaviour
 
     }
 
-    protected virtual void DestroyOutOfRange()
+    protected virtual void OutOfRange()
     {
         if (Mathf.Abs(transform.position.x) > xOutRg || Mathf.Abs(transform.position.z) > zOutRg)
         {
