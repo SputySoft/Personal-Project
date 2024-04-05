@@ -48,10 +48,10 @@ public class SpwnMngr : MonoBehaviour
         spawnLocations[SpawnArea.Right3] = (new Vector3(26.5f, 1f, -3.25f), Quaternion.Euler(0, 180, 0));
         spawnLocations[SpawnArea.Right4] = (new Vector3(26.5f, 1f, -9.75f), Quaternion.Euler(0, 180, 0));
 
-        spawnLocations[SpawnArea.Right1] = (new Vector3(-26.5f, 1f, 9.75f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right2] = (new Vector3(-26.5f, 1f, 3.25f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right3] = (new Vector3(-26.5f, 1f, -3.25f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right4] = (new Vector3(-26.5f, 1f, -9.75f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left1] = (new Vector3(-26.5f, 1f, 9.75f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left2] = (new Vector3(-26.5f, 1f, 3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left3] = (new Vector3(-26.5f, 1f, -3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left4] = (new Vector3(-26.5f, 1f, -9.75f), Quaternion.Euler(0, 0, 0));
     }
     // Start is called before the first frame update
     void Start()

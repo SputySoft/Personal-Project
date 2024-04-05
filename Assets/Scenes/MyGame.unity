@@ -244,6 +244,38 @@ MonoBehaviour:
     - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
       area: 11
       delay: 2
+    - prefabs: {fileID: 2610417043428175746, guid: bf5c32cc9329b53429420b5e84752245, type: 3}
+      area: 3
+      delay: 2
+    - prefabs: {fileID: 6206938436728864512, guid: 1b2b991a3cfa75249a1b7b9a52000092, type: 3}
+      area: 4
+      delay: 0
+  - waveDelay: 0
+    objectSpawneds:
+    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
+      area: 23
+      delay: 2
+    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
+      area: 21
+      delay: 2
+    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
+      area: 19
+      delay: 2
+    - prefabs: {fileID: 3048919451454493700, guid: edbd86b1ad8415145a2d11b683075357, type: 3}
+      area: 17
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 15
+      delay: 5
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 14
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 13
+      delay: 2
+    - prefabs: {fileID: 4474315568815086247, guid: 95d87d80064683b4685d76ce54ef03c2, type: 3}
+      area: 12
+      delay: 2
   spawningBuilding: 0
   yPosition: 10
 --- !u!1 &705507993

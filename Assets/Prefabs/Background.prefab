@@ -50,8 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vSpeed: -5
-  hSpeed: 0
-  xOutRg: 30
   zOutRg: -30
 --- !u!1001 &5384699604174951709
 PrefabInstance:
@@ -101,6 +99,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e08c8320a28c735419edd514f25925cb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dda2001a611dafe42b01846c3f19331c, type: 2}
     - target: {fileID: 919132149155446097, guid: e08c8320a28c735419edd514f25925cb, type: 3}
       propertyPath: m_Name
       value: CityBackground (1)
@@ -163,6 +165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e08c8320a28c735419edd514f25925cb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dda2001a611dafe42b01846c3f19331c, type: 2}
     - target: {fileID: 919132149155446097, guid: e08c8320a28c735419edd514f25925cb, type: 3}
       propertyPath: m_Name
       value: CityBackground (3)
@@ -225,6 +231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e08c8320a28c735419edd514f25925cb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dda2001a611dafe42b01846c3f19331c, type: 2}
     - target: {fileID: 919132149155446097, guid: e08c8320a28c735419edd514f25925cb, type: 3}
       propertyPath: m_Name
       value: CityBackground (2)
@@ -287,6 +297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7d4e33ddc788d644ebdfb85384b88fe4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dda2001a611dafe42b01846c3f19331c, type: 2}
     - target: {fileID: 919132149155446097, guid: 7d4e33ddc788d644ebdfb85384b88fe4, type: 3}
       propertyPath: m_Name
       value: Street
@@ -349,6 +363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e08c8320a28c735419edd514f25925cb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dda2001a611dafe42b01846c3f19331c, type: 2}
     - target: {fileID: 919132149155446097, guid: e08c8320a28c735419edd514f25925cb, type: 3}
       propertyPath: m_Name
       value: CityBackground
