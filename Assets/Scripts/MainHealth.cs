@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class MainHealth : MonoBehaviour
 {
-    public int health = 1;
-    public float damageSpeed = 0.5f;
-    public List<string> DamagerList;
-    public bool temporary = false;
-    public int lifeTime = 20;
+    [SerializeField] private int _health;
+    public int health
+    {
+        get { return _health; }
+        private set { _health = value; }
+    }
+    [SerializeField] private float damageSpeed = 0.5f;
+    [SerializeField] private List<string> DamagerList;
+    [SerializeField] private bool temporary = false;
+    [SerializeField] private int lifeTime = 20;
     
     // Start is called before the first frame update
     void Start()

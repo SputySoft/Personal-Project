@@ -12,7 +12,7 @@ public class SpwnMngr : MonoBehaviour
     public List<Wave> waves = new List<Wave>();
     public Dictionary<SpawnArea, (Vector3 position, Quaternion rotation)> spawnLocations;
     public bool spawningBuilding;//not used
-                                 //yet
+    [SerializeField] private float yPosition=10.0f;
     
 
     void Awake()
@@ -48,10 +48,10 @@ public class SpwnMngr : MonoBehaviour
         spawnLocations[SpawnArea.Right3] = (new Vector3(26.5f, 1f, -3.25f), Quaternion.Euler(0, 180, 0));
         spawnLocations[SpawnArea.Right4] = (new Vector3(26.5f, 1f, -9.75f), Quaternion.Euler(0, 180, 0));
 
-        spawnLocations[SpawnArea.Right1] = (new Vector3(-26.5f, 1f, 9.75f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right2] = (new Vector3(-26.5f, 1f, 3.25f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right3] = (new Vector3(-26.5f, 1f, -3.25f), Quaternion.Euler(0, 0, 0));
-        spawnLocations[SpawnArea.Right4] = (new Vector3(-26.5f, 1f, -9.75f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left1] = (new Vector3(-26.5f, 1f, 9.75f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left2] = (new Vector3(-26.5f, 1f, 3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left3] = (new Vector3(-26.5f, 1f, -3.25f), Quaternion.Euler(0, 0, 0));
+        spawnLocations[SpawnArea.Left4] = (new Vector3(-26.5f, 1f, -9.75f), Quaternion.Euler(0, 0, 0));
     }
     // Start is called before the first frame update
     void Start()
@@ -88,7 +88,7 @@ public class SpwnMngr : MonoBehaviour
 
                 var spawnData = spawnLocations[objToSpawn.area];
 
-                Instantiate(objToSpawn.prefabs, spawnData.position, spawnData.rotation);
+                Instantiate(objToSpawn.prefabs, spawnData.position + new Vector3 (0.0f, yPosition, 0.0f) , spawnData.rotation);
 
                 Debug.Log("Spawned Something from wave" + wave);
 
