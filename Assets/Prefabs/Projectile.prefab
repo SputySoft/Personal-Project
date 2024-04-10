@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa812320eee79e46ae248149c5830b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  _health: 1
   damageSpeed: 0.5
   DamagerList:
   - Obstacle

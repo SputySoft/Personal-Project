@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67689cb13cb486459c33046ffc70f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  _health: 1
   damageSpeed: 0.5
   DamagerList:
   - Player

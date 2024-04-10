@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MainHealth
 {
-    public ParticleSystem explosion;
+    [SerializeField] private ParticleSystem explosion;
 
     protected override void Death()
     {

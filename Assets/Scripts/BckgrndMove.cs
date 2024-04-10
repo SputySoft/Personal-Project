@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BckgrndMove : MonoBehaviour
 {
-    public float vSpeed = -5;
+    [SerializeField] private float vSpeed;
     public int zOutRg = -30;
     // Start is called before the first frame update
     void Start()
