@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//abstraction
 public class Movement : MonoBehaviour
 {
     public int vSpeed = -5;

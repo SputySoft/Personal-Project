@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainHealth : MonoBehaviour
 {
-    [SerializeField] private int _health;
+    [SerializeField] private int _health;//encapuslation
     public int health
     {
         get { return _health; }
